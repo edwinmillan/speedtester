@@ -1,0 +1,7 @@
+version: '3'
+services:
+  speedtester:
+    build: .
+    image: speedtester
+    environment:
+      INTERVAL: 600
