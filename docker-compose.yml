@@ -5,3 +5,13 @@ services:
     image: speedtester
     environment:
       INTERVAL: 600
+    logging:
+      driver: splunk
+      options:
+        splunk-url: https://{splunk-url}:8088
+        splunk-insecureskipverify: "true"
+        splunk-token: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+        splunk-source: speedtester
+        splunk-sourcetype: speedtester.py
+        splunk-format: json
+        splunk-index: speedtester
