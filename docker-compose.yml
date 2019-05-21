@@ -1,6 +1,7 @@
 version: '3'
 services:
   speedtester:
+    container_name: speedtester
     build: .
     image: speedtester
     environment:
