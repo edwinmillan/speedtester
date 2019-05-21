@@ -20,7 +20,7 @@ def run_speed_test():
 def main():
     env_interval = os.getenv('INTERVAL')
     if env_interval:
-        interval = env_interval
+        interval = int(env_interval)
     else:
         interval = 600
     while True:
