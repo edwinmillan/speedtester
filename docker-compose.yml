@@ -3,6 +3,7 @@ services:
   speedtester:
     container_name: speedtester
     build: .
+    restart: unless-stopped
     image: speedtester
     environment:
       INTERVAL: 600
